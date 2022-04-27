@@ -21,9 +21,8 @@ public class FormularioServiceImpl implements FormularioService {
 	
 	@Override
 	public List<Formulario> listarTodos() {
-
  		List<Formulario> fm = new ArrayList<>();
- 		formularioRepositorio.findAll();
+ 		formularioRepositorio.findAll().forEach(fm::add);
 		return fm;
 		
 	}

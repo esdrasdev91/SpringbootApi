@@ -42,11 +42,10 @@ public class FormularioController {
 	}
 	
 	
-	@DeleteMapping
+	@DeleteMapping("/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void excluir(@PathVariable Long id) {
 		fms.delete(id);
-		
 		
 
 	}
